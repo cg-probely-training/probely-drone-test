@@ -6,8 +6,12 @@ steps:
 
 - name: probely
   image: bbarao/drone-test
-  settings:
-    api_key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZWdpb24iOiJldSIsImp0aSI6IjJDY0ZhaTRnbjhGSiJ9.k7lHueJAacVBgHjat9mVASIS0AzQp98YsKO3nXm41j0
-    target_id: 2B6Y43DZVaKz
-    region: eu
-    scan_profile: normal
+  environment:
+    PLUGIN_API_KEY:
+      from_secret: p_api_key
+    PLUGIN_TARGET_ID:
+      from_secret: p_target_id
+    PLUGIN_REGION:
+      from_secret: p_region
+    PLUGIN_SCAN_PROFILE:
+      from_secret: p_scan_profile
