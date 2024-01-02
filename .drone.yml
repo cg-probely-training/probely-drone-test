@@ -1,0 +1,13 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+
+- name: probely
+  image: bbarao/drone-test
+  settings:
+    api_key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZWdpb24iOiJldSIsImp0aSI6IjJDY0ZhaTRnbjhGSiJ9.k7lHueJAacVBgHjat9mVASIS0AzQp98YsKO3nXm41j0
+    target_id: 2B6Y43DZVaKz
+    region: eu
+    scan_profile: normal
