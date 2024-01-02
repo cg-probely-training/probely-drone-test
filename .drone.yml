@@ -5,7 +5,7 @@ name: default
 steps:
 
 - name: probely
-  image: bbarao/drone-test
+  image: probely/drone-io:latest
   environment:
     PLUGIN_API_KEY:
       from_secret: p_api_key
